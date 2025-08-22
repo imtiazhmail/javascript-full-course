@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create, Append & Prepend Example</title>
+</head>
+<body>
+  <div id="container">
+    <p>First paragraph (already in HTML)</p>
+  </div>
+
+  <script>
+    // 1. Select container
+    const container = document.getElementById("container");
+
+    // 2. Create a new element
+    const newPara = document.createElement("p");
+    newPara.textContent = "I was created with createElement!";
+
+    // 3. Append → adds to the END of container
+    container.append(newPara);
+
+    // 4. Prepend → adds to the START of container
+    const topPara = document.createElement("p");
+    topPara.textContent = "I was prepended at the top!";
+    container.prepend(topPara);
+  </script>
+</body>
+</html>
