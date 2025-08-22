@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dir in JS</title>
+  </head>
+  <body>
+    <p id="demo">This is Imtiaz Hussain</p>
+
+    <script>
+        //console.log() is used to print the message in the console 
+        //innerText, textContent, and innerHTML are used to change the text of the paragraph
+      let nameEl = document.getElementById("demo");
+      nameEl.innerText = "This is Imtiaz Hussain From Lahore Pakistan"; //it changes the text of the paragraph.it ignore hidden content
+      nameEl.textContent = "This is Imtiaz Hussain From Lahore Pakistan"; //it also changes the text of the paragraph.
+      nameEl.innerHTML = "<i> This is Imtiaz Hussain From Lahore Pakistan</i>"; //it changes the text of the paragraph and makes it italic
+
+
+      //console.dir() is used to print the object in a more readable format
+      const person = {
+        name: "Imtiaz",
+        age: 25,
+        city: "Lahore",
+      };
+
+      console.log(person); //this will print the object
+      console.dir(person); //this will print the object in a more readable format
+      console.table(person)
+
+    </script>
+  </body>
+</html>

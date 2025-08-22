@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>getAttribute & setAttribute Examples</title>
+</head>
+<body>
+  <h2>1. getAttribute()</h2>
+  <img id="myImg" src="cat.png" alt="Cute Cat">
+  <p>Open console (F12) to see output.</p>
+
+  <h2>2. setAttribute()</h2>
+  <a id="myLink" href="https://example.com">Visit Site</a>
+
+  <h2>3. Combined Example</h2>
+  <input id="myInput" type="text" value="Hello">
+
+  <script>
+    // ----------------------
+    // Example 1: getAttribute
+    // ----------------------
+    let img = document.getElementById("myImg");
+    console.log("Image src:", img.getAttribute("src"));   // cat.png
+    console.log("Image alt:", img.getAttribute("alt"));   // Cute Cat
+
+    // ----------------------
+    // Example 2: setAttribute
+    // ----------------------
+    let link = document.getElementById("myLink");
+    // change href
+    link.setAttribute("href", "https://google.com");
+    // add new attribute
+    link.setAttribute("target", "_blank");
+    console.log("Updated link href:", link.getAttribute("href"));
+
+    // ----------------------
+    // Example 3: Combined (get + set)
+    // ----------------------
+    let input = document.getElementById("myInput");
+    console.log("Input value before:", input.getAttribute("value")); // Hello
+    input.setAttribute("value", "World"); // update attribute
+    console.log("Input value after:", input.getAttribute("value"));  // World
+  </script>
+</body>
+</html>
